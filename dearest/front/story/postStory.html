@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>说出故事</title>
+		<link rel="stylesheet" type="text/css" href="../common/css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="css/article.css"/>
+		<script src="../common/js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body style="padding-top: 100px;">
+		<header>
+			<div class="dear">
+				dearest
+			</div>
+			<div class="user"> 
+				<img src="../../back/main/assets/img/man3.jpg"/>
+				<span>安庆</span>
+				
+			</div>
+		</header>
+		<div class="content-box">
+			<aside>
+				<div id="item1" class="item active">
+					写故事
+				</div>
+				<div id="item2" class="item">
+					已发布故事
+				</div>
+			</aside>
+			<div class="right1">
+				<div class="addArticle">
+					<a href="addStory.html">+添加新故事</a>
+				</div>
+			</div>
+			<div class="right2">
+				<div class="banner">
+					已发布故事
+				</div>
+				<p>您还没有发布任何故事，您可以立即<a href="addStory.html">分享你的故事</a></p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$("#item1").on("click",function(){
+					$(".item").removeClass("active");
+					$(event.target).addClass("active");
+					$(".right2").css("display","none");
+					$(".right1").css("display","block");
+				});
+				$("#item2").on("click",function(){
+					$(".item").removeClass("active");
+					$(event.target).addClass("active");
+					$(".right1").css("display","none");
+					$(".right2").css("display","block");
+				});
+			})
+		</script>
+	</body>
+</html>

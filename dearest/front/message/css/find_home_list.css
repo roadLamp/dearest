@@ -1,0 +1,120 @@
+
+/*导航栏结束*/
+/*.body{
+	width: 75%;
+	height: 1650px;
+	background-color: white;
+	border: 1px solid #90D966;
+	position: absolute;
+	left: 13%;
+	top: 390px;
+}*/
+li {
+	list-style: none;
+}
+.body .btn{
+	background-color: #90D966;
+	color: white;
+	position: absolute;
+	top: 35px;
+	left: 35px;
+}
+.btn:hover{
+	color: #f17074 !important;
+}
+.body hr{
+	width: 93%;
+	height: 2px;
+	background-color: #90D966;
+	position: absolute;
+	top: 47px;
+	left: 33px;
+}
+.select{
+	position: absolute;
+	right: 80px;
+	
+}
+.select li{
+	float: left;
+	margin-top: 35px;
+	margin-left: 5px;
+}
+
+.select li select:focus{
+	border: 0.1em solid #86c2f6;
+}
+.list{
+	width: 88%;
+	height: 1500px;
+	/*border: 1px solid red;*/
+	position: absolute;
+	top: 95px;
+	left: 60px;
+}
+.list .li{
+	
+	float: left;
+	
+	margin-left: 74px;
+	margin-top: 20px;
+}
+.list .ul_li img{
+	width: 130px;
+	height: 160px;
+	border: 2px solid #CCCCCC;
+} 
+.list .ul li{
+	margin-top: 20px;
+}
+
+.us{
+	width: 800px;
+	height: 270px;
+	margin: auto;
+}
+.ourwork{
+	padding-top: 5px;
+	width: 550px;
+	height: 160px;
+	overflow: hidden;
+	float: left;
+}
+.ourwork p{
+	font-size: 40px;
+	font-weight: bold;
+	color: #cccccc;
+}
+.ourwork span{
+	font-size: 12px;
+	color: #b4b4b4;
+}
+.photo{
+	width: 240px;
+	height: 250px;
+	float: right;
+	margin-top:30px ;
+	
+}
+.photo img{
+	width: 240px;
+	height: 250px;
+}
+.copyright{
+	width: 490px;
+	height: 90px;
+	float: left;
+	margin-top:20px ;
+}
+.links{
+	color: #8B8B8D;
+	font-size: 12px;
+	line-height: 50px;
+}
+.links2{
+	font-size: 12px;
+	line-height: 50px;
+	margin-left: 20%;
+}
+
+

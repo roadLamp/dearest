@@ -1,0 +1,94 @@
+/*company.html图片效果*/
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+.grid {
+	padding: 20px 20px 10px 20px;
+	max-width: 1300px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.grid li {
+	display: inline-block;
+	width: 440px;
+	margin: 0;
+	padding: 20px;
+	text-align: left;
+	position: relative;
+}
+
+.grid figure {
+	margin: 0;
+	position: relative;
+}
+
+.grid figure img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: #65A0C8;
+	background: url(../img/bg12.jpg);
+}
+
+
+.grid figcaption a {
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 2px;
+	display: inline-block;
+	background: #ed4e6e;
+	color: #fff;
+}
+
+
+/* Caption Style 6 */
+.cs-style-6 figure img {
+	z-index: 10;
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.no-touch .cs-style-6 figure:hover img,
+.cs-style-6 figure.cs-hover img {
+	-webkit-transform: translateY(-50px) scale(0.5);
+	-moz-transform: translateY(-50px) scale(0.5);
+	-ms-transform: translateY(-50px) scale(0.5);
+	transform: translateY(-50px) scale(0.5);
+}
+
+.cs-style-6 figcaption {
+	height: 100%;
+	width: 100%;
+}
+
+.cs-style-6 figcaption h3 {
+	margin-top: 60%;
+}
+
+.cs-style-6 figcaption a {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+
+@media screen and (max-width: 31.5em) {
+	.grid {
+		padding: 10px 10px 100px 10px;
+	}
+	.grid li {
+		width: 100%;
+		min-width: 300px;
+	}
+}

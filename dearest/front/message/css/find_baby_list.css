@@ -1,0 +1,109 @@
+
+h4{
+	margin: 0px;
+}
+.service-icon img{
+	width: 110px;
+	height: 130px;
+}
+.paging{
+	width: 120px;
+	height: 40px;
+	position: absolute;
+	right: 200px;
+	bottom: -270px;
+}
+
+.ul_li .div{
+	float: left;
+	width: 8px;
+	height: 8px;
+	background-color:#90D966 ;
+	margin-left: 10px;
+	margin-top: 15px;
+	border-radius: 50%;
+}
+
+.ul_li .div1{
+	float: left;
+	width: 8px;
+	height: 8px;
+	
+	margin-left: 10px;
+	margin-top: 15px;
+	border-radius: 50%;
+	border: 1px solid #8C8C8C;
+
+}
+.div2{
+	
+	position: absolute;
+	left: 70px;
+	top: 8px;
+	
+}
+.div2 a{
+	color: #5C5C5C;
+}
+.footer{
+	width: 100%;
+	height: 280px;
+	/*background-color: yellow;*/
+	margin-top: 40px;
+}
+.footer hr{
+	width: 1115px;
+	height: 2px;
+	background-color: #90D966;
+	margin-left: 112px;
+	margin-top: -30px;
+}
+.us{
+	width: 800px;
+	height: 270px;
+	margin: auto;
+}
+.ourwork{
+	padding-top: 5px;
+	width: 550px;
+	height: 160px;
+	overflow: hidden;
+	float: left;
+}
+.ourwork p{
+	font-size: 40px;
+	font-weight: bold;
+	color: #cccccc;
+}
+.ourwork span{
+	font-size: 12px;
+	color: #b4b4b4;
+}
+.photo{
+	width: 240px;
+	height: 250px;
+	float: right;
+	margin-top:30px ;
+	
+}
+.photo img{
+	width: 240px;
+	height: 250px;
+}
+.copy{
+	width: 490px;
+	height: 90px;
+	float: left;
+	margin-top:20px ;
+}
+.links{
+	color: #8B8B8D;
+	font-size: 12px;
+	line-height: 50px;
+}
+.links2{
+	font-size: 12px;
+	line-height: 50px;
+	margin-left: 20%;
+}
+

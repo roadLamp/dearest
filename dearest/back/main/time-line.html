@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>后台-故事</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/loader-style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/css/extra-pages.css">
+
+
+
+
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/minus.png">
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!--头部 navbar开始 -->
+    <nav role="navigation" class="navbar navbar-static-top">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="entypo-menu"></span>
+                </button>
+                <button class="navbar-toggle toggle-menu-mobile toggle-left" type="button">
+                    <span class="entypo-list-add"></span>
+                </button>
+
+
+
+
+                <div id="logo-mobile" class="visible-xs">
+                   <h1>后台管理<span></span></h1>
+                </div>
+
+
+            </div>
+
+
+           
+             <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+            	
+            	<ul class="nav navbar-nav">
+
+                    <li class="dropdown">
+
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i style="font-size:20px;" class="icon-conversation"></i><div class="noft-red">23</div></a>
+
+
+                      <ul id="dropContent" style="margin: 11px 0 0 9px;" role="menu" class="dropdown-menu dropdown-wrap" >
+                            <li>
+                                <div>查看全部信息</div>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                    <li><a href="#"><i data-toggle="tooltip" data-placement="bottom" title="Help" style="font-size:20px;" class="icon-help tooltitle"></i></a>
+                    </li>
+
+                </ul>
+          
+                <div id="nt-title-container" class="navbar-left running-text visible-lg">
+                    <ul class="date-top">
+                        <li class="entypo-calendar"></li>
+                        <li id="Date"></li>
+
+
+                    </ul>
+
+                    <ul id="digital-clock" class="digital">
+                        <li class="entypo-clock"></li>
+                        <li class="hour"></li>
+                        <li>:</li>
+                        <li class="min"></li>
+                        <li>:</li>
+                        <li class="sec"></li>
+                        <li class="meridiem"></li>
+                    </ul>
+                    <ul id="nt-title">
+                     
+                    </ul>
+                </div>
+
+                <ul  class="nav navbar-nav navbar-right">
+                	 <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" class="admin-pic img-circle" src="assets/img/story.jpg">Hi, 小小 <b class="caret"></b>
+                        </a>
+                        <ul style="margin-top:14px;" role="menu" class="dropdown-setting dropdown-menu">
+                            <li>
+                                <a href="profile.html">
+                                    <span class="entypo-user"></span>&#160;&#160;我的信息</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-vcard"></span>&#160;&#160;账户设置</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-lifebuoy"></span>&#160;&#160;帮助</a>
+                            </li>
+                            <li class="divider"></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="icon-gear"></span>&#160;&#160;更改背景</a>
+                            <!--设置背景颜色-->
+                        <ul role="menu" class="dropdown-setting dropdown-menu">
+
+                            <li class="theme-bg">
+                                <div id="button-bg5"></div>
+                                <div id="button-bg6"></div>
+                                <div id="button-bg7"></div>
+                                <div id="button-bg13"></div>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- /头navbar结束 -->
+    <div id="skin-select">
+        <div id="logo"  >
+        	<img src="../../../commom/img/logo.png" style="float: left;width: 3vw; "/>
+         <h1>亲爱的</h1>
+        </div>
+
+        <a id="toggle">
+            <span class="entypo-menu"></span>
+        </a>
+        
+
+        <div class="search-hover">
+            <form id="demo-2">
+                <input type="search" placeholder="Search Menu..." class="id_search">
+            </form>
+        </div>
+
+
+         <div class="skin-part">
+            <div id="tree-wrap">
+                <div class="side-bar">
+                    <ul class="topnav menu-left-nest">
+
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="#" title="用户管理">
+                                <i class="icon-document-edit"></i>
+                                <span>用户管理</span>
+
+                            </a>
+                            <ul>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="userList.html" title="用户列表"><i class="entypo-doc-text"></i><span>用户列表</span></a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="404.html" title=""><i class="entypo-newspaper"></i><span>用户详情</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="404.html" title="志愿者管理">
+                                <i class="icon-feed"></i>
+                                <span>志愿者管理</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="index.html" title="失踪人员管理">
+                                <i class="icon-camera"></i>
+                                <span>失踪人员管理</span>
+
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="topnav menu-left-nest">
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="404.html" title="活动">
+                                <i class="icon-window"></i>
+                                <span>活动</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="time-line.html" title="故事">
+                                <i class="icon-mail"></i>
+                                <span>故事</span>
+                                <div class="noft-blue">New</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a class="tooltip-tip ajax-load" href="404.html" title="爱心人士">
+                                <i class="icon-user"></i>
+                                <span>爱心人士</span>
+                                <div class="noft-blue">New</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a class="tooltip-tip ajax-load" href="company.html" title="爱心企业">
+                                <i class="icon-user"></i>
+                                <span>爱心企业</span>
+                                <div class="noft-blue">New</div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="news.html" title="新闻">
+                                <i class="icon-preview"></i>
+                                <span>新闻</span>
+                                <div class="noft-blue New" >New</div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip" href="#" title="其他">
+                                <i class="icon-document-new"></i>
+                                <span>其他</span>
+                            </a>
+                            <ul>
+                                 <li>
+                                    <a class="tooltip-tip2 ajax-load" href="profile.html" title="Profile Page"><i class="icon-user"></i><span>个人主页</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip" href="login.html" title="登陆">
+                                <i class="icon-download"></i>
+                                <span>登陆</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <ul id="menu-showhide" class="topnav menu-left-nest">
+             
+                        <li>
+                            <a class="tooltip-tip" href="#" title="关于我们">
+                                <i class="icon-document"></i>
+                                <span>关于我们</span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="side-dash">
+                        <h3>
+                            <span>访问量</span>
+                        </h3>
+                        <div id="g1" style="height:180px" class="gauge">475856</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 左边菜单栏结束 -->
+
+
+
+
+    <!--  PAPER WRAP -->
+    <div class="wrap-fluid">
+        <div class="container-fluid paper-wrap bevel tlbr">
+
+
+
+
+
+            
+            <!--标题 -->
+            <div class="row">
+                <div id="paper-top">
+                    <div class="col-sm-3">
+                        <h2 class="tittle-content-header">
+                            <span class="entypo-clock"></span>
+                            <span>时间轴
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <div class="col-sm-7">
+                        
+                        <div class="tittle-middle-header">
+
+                            <div class="alert">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <span class="tittle-alert entypo-info-circled"></span>
+                                		欢迎回来,&nbsp;
+                                <strong>小小!</strong>&nbsp;&nbsp;你的上次登陆是在 昨天, 16:54 PM
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <!--/ 标题结束 -->
+
+           
+            <ul id="breadcrumb">
+                <li>
+                    <span class="entypo-home"></span>
+                </li>
+                <li><i class="fa fa-lg fa-angle-right"></i>
+                </li>
+               
+               
+                
+                <li><a href="#" title="Sample page 1">时间轴</a>
+                </li>
+                <li class="pull-right">
+                    <div class="input-group input-widget">
+
+                        <input style="border-radius:15px" type="text" placeholder="查询..." class="form-control">
+                    </div>
+                </li>
+            </ul>
+
+            
+
+
+
+            <div class="content-wrap">
+                <div class="time-wrap">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+                            <ul class="timeline">
+                                
+                                <li class="time-label">
+                                    <span class="bg-red">
+                                        2014.10.5 星期五
+                                    </span>
+                                </li>
+                               
+                                <li>
+                                    <i class="fa fa-envelope bg-time"></i>
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
+                                        <h3 class="timeline-header"><a href="#">小姑凉</a> 发布了一则寻子故事</h3>
+                                        <div class="timeline-body">
+                                            	孩子失踪三天了。<br />
+                                            	刚开始一位孩子去谁家玩了，可是，一下午过去了。孩子还没有回来，他从来没有出去这么久没回家。我发觉孩子可能出事了。我找了整个村子和旁边的所有村子。孩子就像没来没有一样的消失了。后悔，伤心。早一点发现是不是宝宝就不会失踪了
+                                            	今天第三天了。怎么办。怎么办怎么办！<br>
+                                            	孩子，你在哪呀！冷不冷？饿不饿？
+                                        </div>
+                                        <div class='timeline-footer'>
+                                            <a class="btn btn-primary btn-xs">查看更多</a>
+                                            <a class="btn btn-success btn-xs">通过</a>
+                                            <a class="btn btn-danger btn-xs">删除</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <!-- timeline item -->
+                                <li>
+                                    <i class="fa fa-user bg-time"></i>
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 15 分钟以前</span>
+                                        <h3 class="timeline-header no-border"><a href="#">大灰狼</a>发布了一条亲身经历</h3>
+
+                                        <div class="timeline-body">
+                                            	他悲戚地说，其实我不一定要把孩子领回来的，我只要看一眼，知道他还活着，在什么地方，吃得饱，穿得暖，没有受到虐待，我就心满意足了。 
+                                        </div>
+                                        <div class='timeline-footer'>
+                                            <a class="btn btn-primary btn-xs">查看更多</a>
+                                            <a class="btn btn-success btn-xs">通过</a>
+                                            <a class="btn btn-danger btn-xs">删除</a>
+                                        </div>
+                                    </div>
+                                </li>
+                               <li>
+                                    <i class="fa fa-camera bg-time"></i>
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 2个小时前</span>
+                                        <h3 class="timeline-header"><a href="#">奶糖</a> 发布了一篇感谢信</h3>
+                                        <div class="timeline-body">
+                                            <img src="assets/img/man2.jpg" alt="..." class='margin'>
+                                            <img src="assets/img/man4.jpg" alt="..." class='margin'>
+                                            <img src="assets/img/man1.jpg" alt="..." class='margin'>
+                                            <br />
+                                            <br />
+                                            
+                                            	感谢你们，帮我找到了孩子。<br />
+                                            	我的孩子是五岁时走丢的。已经两年了。<br />
+                                            	孩子是我们全家的希望了。
+                                        </div>
+                                        <div class='timeline-footer'>
+                                            <a class="btn btn-primary btn-xs">查看更多</a>
+                                            <a class="btn btn-warning btn-xs">发布到首页</a>
+                                         
+                                        
+                                        </div>
+                                    </div>
+                                </li>
+                              
+                                <li class="time-label">
+                                    <span class="bg-green">
+                                        2014.10.1 星期一
+                                    </span>
+                                </li>
+                                  <li>
+                                    <i class="fa fa-comments bg-time"></i>
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 5天前</span>
+                                        <h3 class="timeline-header"><a href="#">小白兔</a> 发布了一条寻亲故事</h3>
+                                        <div class="timeline-body">
+                                           <img src="../../front/action/img/last3.png" style="width: 150px;height: 150px; border-radius: 50%;"><br />
+                                           <br />
+                                           	　王万军是贵阳市一名失踪儿童的父亲，他5岁的儿子王剑波（小名小贵阳）于1998年6月失踪以来，他就将菜市场的生意丢给妻子，
+                                           	带上干粮和地图，跑遍福建、广东、江苏、河南等地，不知不觉中，他将当地每一位失踪儿童的家长都串起来了，
+                                           	将过去数年来当地失踪的200多名儿童的姓名、别名、性别、年龄、遗失地址、父母及联系电话编成一部"民间打拐志"。	
+                                        </div>
+                                        <div class='timeline-footer'>
+                                           
+                                            <a class="btn btn-primary btn-xs">查看更多</a>
+                                            <a class="btn btn-success btn-xs">通过</a>
+                                            <a class="btn btn-danger btn-xs">删除</a>
+                                        
+                                        </div>
+                                    </div>
+                                </li>
+                               
+                                
+                              
+                                <li>
+                                    <i class="fa fa-video-camera bg-time"></i>
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 4 天前</span>
+                                        <h3 class="timeline-header"><a href="#">小鸭子</a> 发布一段视频</h3>
+                                        <div class="timeline-body">
+                                            <video width="200" height="150">
+                                            	<source src="assets/video/蜡笔小新第3部 国语103.mp4" type="video/mp4"></source>
+   
+                                            </video>
+
+                                        </div>
+                                        <div class="timeline-footer">
+                                        	<a class="btn btn-primary btn-xs">查看更多</a>
+                                            <a class="btn btn-info btn-xs">推送</a>
+                                            <a class="btn btn-danger btn-xs">删除</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <li>
+                                    <i class="fa fa-clock-o bg-time"></i>
+                                </li>
+                            </ul>
+                            
+
+                        </div>
+                        <nav class="nav">
+							  <ul class="pagination">
+							    <li class="disabled"><a href="#">&laquo;</a></li>
+							    <li class="active"><a href="#">1 </a></li>
+							    <li class="disabled"><a href="#">2 </a></li>
+							    <li class="disabled"><a href="#">3 </a></li>
+							    <li class="disabled"><a href="#">4 </a></li>
+							    <li class="disabled"><a href="#">&laquo;</a></li>
+							  </ul>
+							</nav>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+          
+
+
+
+            <!-- FOOTER -->
+            <div class="footer-space"></div>
+             <div id="footer">
+                    <div class="devider-footer-left"></div>
+                    <div class="time">
+                        <p id="spanDate">
+                        <p id="clock">
+                    </div>
+                    <div class="copyright">
+                       <img src="../../../commom/img/logo.png" style="width: 20px;height: 20px;margin-left: 100px;"><a href="" title="" style="color: #f095b9;" >亲爱的</a></div>
+                    <div class="devider-footer"></div>
+
+
+                </div>
+            
+
+
+        </div>
+    </div>
+  
+
+   
+
+
+
+    
+    <script type="text/javascript" src="assets/js/preloader.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/load.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>

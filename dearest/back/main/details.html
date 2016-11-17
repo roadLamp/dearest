@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>后台-企业详情</title>
+    <meta name="author" content="zyc"  />
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/loader-style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+    
+
+    <link rel="shortcut icon" href="assets/ico/minus.png">
+</head>
+
+<body> 
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!--头部 navbar开始 -->
+    <nav role="navigation" class="navbar navbar-static-top">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="entypo-menu"></span>
+                </button>
+                <button class="navbar-toggle toggle-menu-mobile toggle-left" type="button">
+                    <span class="entypo-list-add"></span>
+                </button>
+
+                <div id="logo-mobile" class="visible-xs">
+                   <h1>后台管理<span></span></h1>
+                </div>
+
+            </div>
+
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+            	
+            	<ul class="nav navbar-nav">
+
+                    <li class="dropdown">
+
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i style="font-size:20px;" class="icon-conversation"></i><div class="noft-red">23</div></a>
+
+
+                      <ul id="dropContent" style="margin: 11px 0 0 9px;" role="menu" class="dropdown-menu dropdown-wrap" >
+                            <li>
+                                <div>查看全部信息</div>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                    <li><a href="#"><i data-toggle="tooltip" data-placement="bottom" title="Help" style="font-size:20px;" class="icon-help tooltitle"></i></a>
+                    </li>
+
+                </ul>
+          
+                <div id="nt-title-container" class="navbar-left running-text visible-lg">
+                    <ul class="date-top">
+                        <li class="entypo-calendar"></li>
+                        <li id="Date"></li>
+
+
+                    </ul>
+
+                    <ul id="digital-clock" class="digital">
+                        <li class="entypo-clock"></li>
+                        <li class="hour"></li>
+                        <li>:</li>
+                        <li class="min"></li>
+                        <li>:</li>
+                        <li class="sec"></li>
+                        <li class="meridiem"></li>
+                    </ul>
+                    <ul id="nt-title">
+                   <!--天气预告-->
+                    </ul>
+                </div>
+
+                <ul  class="nav navbar-nav navbar-right">
+                	 <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" class="admin-pic img-circle" src="assets/img/story.jpg">Hi, 小小 <b class="caret"></b>
+                        </a>
+                        <ul style="margin-top:14px;" role="menu" class="dropdown-setting dropdown-menu">
+                            <li>
+                                <a href="profile.html">
+                                    <span class="entypo-user"></span>&#160;&#160;我的信息</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-vcard"></span>&#160;&#160;账户设置</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-lifebuoy"></span>&#160;&#160;帮助</a>
+                            </li>
+                            <li class="divider"></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="icon-gear"></span>&#160;&#160;更改背景</a>
+                            <!--设置背景颜色-->
+                        <ul role="menu" class="dropdown-setting dropdown-menu">
+
+                            <li class="theme-bg">
+                                <div id="button-bg5"></div>
+                                <div id="button-bg6"></div>
+                                <div id="button-bg7"></div>
+                                <div id="button-bg13"></div>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!--头部 navbar结束 -->
+
+    <!-- 左边菜单栏开始 -->
+    <div id="skin-select">
+        <div id="logo">
+        	<img src="../../../commom/img/logo.png" style="float: left;width: 3vw;"/>
+         <h1>亲爱的</h1>
+        </div>
+
+        <a id="toggle">
+            <span class="entypo-menu"></span>
+        </a>
+        <div class="dark">
+            <form action="#">
+                <span>
+                    <input  type="text" name="search" value="查询 菜单..." class="search rounded id_search" autofocus="">
+                </span>
+            </form>
+        </div>
+
+        <div class="search-hover">
+            <form id="demo-2">
+                <input type="search" placeholder="查询 菜单..." class="id_search">
+            </form>
+        </div>
+
+
+
+
+        <div class="skin-part">
+            <div id="tree-wrap">
+                <div class="side-bar">
+                    <ul class="topnav menu-left-nest">
+
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="#" title="用户管理">
+                                <i class="icon-document-edit"></i>
+                                <span>用户管理</span>
+
+                            </a>
+                            <ul>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="userList.html" title="用户列表"><i class="entypo-doc-text"></i><span>用户列表</span></a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="404.html" title=""><i class="entypo-newspaper"></i><span>用户详情</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="404.html" title="志愿者管理">
+                                <i class="icon-feed"></i>
+                                <span>志愿者管理</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="index.html" title="失踪人员管理">
+                                <i class="icon-camera"></i>
+                                <span>失踪人员管理</span>
+
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="topnav menu-left-nest">
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="404.html" title="活动">
+                                <i class="icon-window"></i>
+                                <span>活动</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="404.html" title="故事">
+                                <i class="icon-mail"></i>
+                                <span>故事</span>
+                                <div class="noft-blue">New</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a class="tooltip-tip ajax-load" href="table-static.html" title="爱心人士">
+                                <i class="icon-user"></i>
+                                <span>爱心人士</span>
+                                <div class="noft-blue">New</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a class="tooltip-tip ajax-load" href="company.html" title="爱心企业">
+                                <i class="icon-user"></i>
+                                <span>爱心企业</span>
+                                <div class="noft-blue">New</div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="news.html" title="新闻">
+                                <i class="icon-preview"></i>
+                                <span>新闻</span>
+                                <div class="noft-blue New" >New</div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip" href="#" title="其他">
+                                <i class="icon-document-new"></i>
+                                <span>其他</span>
+                            </a>
+                            <ul>
+                                 <li>
+                                    <a class="tooltip-tip2 ajax-load" href="profile.html" title="Profile Page"><i class="icon-user"></i><span>个人主页</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip" href="login.html" title="登陆">
+                                <i class="icon-download"></i>
+                                <span>登陆</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <ul id="menu-showhide" class="topnav menu-left-nest">
+             
+                        <li>
+                            <a class="tooltip-tip" href="#" title="关于我们">
+                                <i class="icon-document"></i>
+                                <span>关于我们</span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="side-dash">
+                        <h3>
+                            <span>访问量</span>
+                        </h3>
+                        <div id="g1" style="height:180px" class="gauge"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 左边菜单栏结束 -->
+
+
+
+    
+    <div class="wrap-fluid">
+        <div class="container-fluid paper-wrap bevel tlbr">
+
+		<!--开始-->
+
+          <!--中间顶部开始-->
+            <div class="row">
+                <div id="paper-top">
+                    <div class="col-lg-3">
+                        <h2 class="tittle-content-header">
+                            <i class="icon-window"></i> 
+                            <span>爱心企业</span>
+                        </h2>
+
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="devider-vertical visible-lg"></div>
+                        <div class="tittle-middle-header">
+
+                            <div class="alert">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <span class="tittle-alert entypo-info-circled"></span>
+                                	欢迎回来,&nbsp;
+                                <strong>小小!</strong>&nbsp;&nbsp;你的上次登陆是在 昨天, 16:54 PM
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+            <ul id="breadcrumb">
+                <li>
+                    <span class="entypo-home"></span>
+                </li>
+                <li><i class="fa fa-lg fa-angle-right"></i>
+                </li>
+                <li><a href="company.html" title="">爱心企业</a>
+                </li>
+                <li><i class="fa fa-lg fa-angle-right"></i>
+                </li>
+                <li><a href="com_detail.html" title="">详情</a>
+                <li><i class="fa fa-lg fa-angle-right"></i>
+                </li>
+                <li><a href="mails.html" title="">企业详情</a>
+            </ul>
+		  <!--中间顶部结束-->
+
+
+
+			<!--右边内容-->
+            <div class="content-wrap">
+                
+          	
+               <!--编辑列表开始-->
+             <div class="row">
+              	 <div class="col-sm-12">
+                        <div class="well profile">
+                            <div class="col-sm-12">
+                                <div class="col-xs-12 col-sm-4 text-center">
+                                	
+                                	
+									<!--个人信息左边开始-->
+                                    <ul class="list-group">
+                                        <li class="list-group-item text-left">
+                                            <span class="entypo-user"></span>&nbsp;&nbsp;企业详情</li>
+                                        <li class="list-group-item text-center">
+                                            <img src="assets/img/tengxun.jpg" alt="" class="img-circle img-responsive img-profile">
+
+                                        </li>
+                                        <li class="list-group-item text-center">
+                                            <span class="pull-left">
+                                                <strong>等级</strong>
+                                            </span>
+
+											
+                                            <div class="ratings">
+
+                                                <a href="#">
+                                                    <span class="fa fa-star"></span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa fa-star"></span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa fa-star"></span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa fa-star"></span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa fa-star-o"></span>
+                                                </a>
+
+                                            </div>
+
+
+                                        </li>
+
+                                    </ul>
+                                    <!--个人信息左边结束-->
+
+                                </div>
+                                <div class="col-xs-12 col-sm-8 profile-name">
+                                    <h2>腾讯慈善公益基金会 </h2>
+                                    <div class="row" style="float: right;margin-top: -4vh;">
+                                    <button class="btn btn-danger ">编辑</button>
+                                    <button class="btn btn-info ">增加</button>
+                                    <button class="btn btn-default ">删除</button>
+                                    </div>
+                                    <hr>
+
+                                    <dl class="dl-horizontal-profile">
+                                        <dt>企业名称</dt>
+                                        <dd>腾讯慈善公益基金会</dd>
+
+                                        <dt>企业地址</dt>
+                                        <dd>深圳</dd>
+                                        
+                                        <dt>电话号码</dt>
+                                        <dd>13245678971</dd>
+
+                                        <dt>电子邮箱</dt>
+                                        <dd>tenct@qq.com</dd>
+                                        
+                                        <dt>企业简介</dt>
+                                        <dd>腾讯公司倡导并发起了中国互联网第一家在民政部注册的全国性非公募基金会——腾讯基金会。
+                                        	作为首家由互联网企业发起成立的公益基金会，腾讯基金会致力于推动互联网与公益慈善事业 
+                                        	的深度融合与发展，通过互联网尤其是移动互联网的技术和服务推动公益行业的发展</dd>
+
+                                        <dt>企业宗旨</dt>
+                                        <dd>
+                                            <span class="tags">孤儿</span>
+                                            <span class="tags">救助儿童</span>
+                                        </dd>
+
+                                    </dl>
+
+
+                                    <hr>
+
+                                    <h5>
+                                        <span class="entypo-arrows-ccw"></span>&nbsp;&nbsp;捐助</h5>
+
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-striped table-condensed">
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><i class="pull-right fa fa-edit"></i> 2016年10月20日在慈善晚会捐助200万。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="pull-right fa fa-edit"></i> 2016年10月5日在慈善晚会捐助3万本书。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="pull-right fa fa-edit"></i> 2016年9月30日在慈善晚会捐助1万件衣服。</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 divider text-center">
+                                <div class="col-xs-12 col-sm-4 emphasis">
+                                    <h2>
+                                        <strong>3次</strong>
+                                    </h2>
+                                    <p>
+                                        <small>捐款</small>
+                                    </p>
+                                    <button class="btn btn-success btn-block">
+                                        <span class="fa fa-plus-circle"></span>&nbsp;&nbsp;捐助总次数</button>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 emphasis">
+                                    <h2>
+                                        <strong>300万</strong>
+                                    </h2>
+                                    <p>
+                                        <small>资金</small>
+                                    </p>
+                                    <button class="btn btn-info btn-block">
+                                        <span class="fa fa-plus-circle"></span>&nbsp;&nbsp;捐助总资金</button>
+                                </div>
+                                <div class="col-sm-4 emphasis">
+                                    <h2>
+                                        <strong>1000</strong>
+                                    </h2>
+                                    <p>
+                                        <small>人数</small>
+                                    </p>
+                                    <button class="btn btn-default btn-block">
+                                        <span class="fa fa-user"></span>&nbsp;&nbsp;资助总人数</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+               <!--编辑列表结束-->
+               
+               
+                </div>
+                <!--右边内容结束-->
+
+
+				<!--底部开始-->
+                <div class="footer-space"></div>
+                <div id="footer">
+                    <div class="devider-footer-left"></div>
+                    <div class="time">
+                        <p id="spanDate">
+                        <p id="clock">
+                    </div>
+                    <div class="copyright">
+                        <span class="entypo-heart"></span><a href="" title="" >亲爱的</a></div>
+                    <div class="devider-footer"></div>
+
+
+                </div>
+                <!--底部结束-->
+
+
+            </div>
+        </div>
+    </div>
+
+
+	
+    
+	<!--导航栏+菜单栏-->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script src="assets/js/progress-bar/number-pb.js"></script><!--换背景颜色-->
+    <script type="text/javascript" src="assets/js/preloader.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/load.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+	
+	<script src="assets/javascript/index.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+	
+	
+	
+
+<div style="text-align:center;">
+<p>Dearest <a href="" target="_blank" title="亲爱的">亲爱的</a><a href="" title="" target="_blank"></a></p>
+</div>
+
+</body>
+
+</html>
+

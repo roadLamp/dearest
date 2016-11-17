@@ -1,0 +1,145 @@
+.company_list {
+  position: relative;
+  display: block;
+  background: #FFFFFF;
+  border-radius: 4px;
+  margin: 20px;
+  border: 1px solid #ededed;
+}
+video {
+  max-width: 100%;
+  height: auto;
+}
+.vendor {
+  margin-bottom: 2em;
+}
+.companyImg {
+  display: block;
+  height: 30vh;
+  width: 100%;
+}
+.companyImg1 {
+  display: block;
+  height: 40vh;
+  width: 100%;
+}
+.companyImg2 {
+  height: 20vh;
+  width: 100%;
+  display: block;
+}
+.company-text {
+  padding: 0 20px;
+}
+.company-text > h2 {
+  font-size: 1.6em;
+  font-weight: 300;
+}
+.tag-nest {
+  border-bottom: 1px dashed #EDEDED;
+  border-top: 1px dashed #EDEDED;
+  margin: 20px 0;
+  padding: 15px 20px;
+}
+.tag-nest i {
+  font-style: normal;
+  margin-right: 10px;
+}
+.video-category-bg {
+  background: none repeat scroll 0 0 #FF6B6B;
+  height: 80px;
+  position: relative;
+  width: 100%;
+}
+.photo-category-bg {
+  background: none repeat scroll 0 0 #0090D9;
+  height: 80px;
+  position: relative;
+  width: 100%;
+}
+.audio-category-bg {
+  background: none repeat scroll 0 0 #08ADB3;
+  height: 80px;
+  position: relative;
+  width: 100%;
+}
+.album-category-bg {
+  background: none repeat scroll 0 0 #FAAB01;
+  height: 80px;
+  position: relative;
+  width: 100%;
+}
+.triangle-photo-right {
+  border-style: solid;
+  border-width: 0 0 120px 150px;
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: -40px;
+  width: 0;
+  z-index: 0;
+  border-color: transparent transparent #3FBDFC transparent;
+}
+.triangle-audio-right {
+  border-style: solid;
+  border-width: 0 0 120px 150px;
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: -40px;
+  width: 0;
+  z-index: 0;
+  border-color: transparent transparent #10D4DD transparent;
+}
+.triangle-album-right {
+  border-style: solid;
+  border-width: 0 0 120px 150px;
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: -40px;
+  width: 0;
+  z-index: 0;
+  border-color: transparent transparent #F3CB41 transparent;
+}
+.link-media.pull-right {
+  color: #FFFFFF;
+  font-size: 3em;
+  margin: 10px 25px 0;
+  position: relative;
+  z-index: 1;
+}
+.video-category-bg > h3,
+.photo-category-bg > h3,
+.audio-category-bg > h3,
+.album-category-bg > h3 {
+  color: #FFFFFF;
+  font-size: 1.5em;
+  font-weight: 300;
+  left: 20px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 8px;
+  width: auto;
+}
+.triangle-video-right {
+  border-style: solid;
+  border-width: 0 0 120px 150px;
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: -40px;
+  width: 0;
+  z-index: 0;
+  border-color: transparent transparent #F24B4B transparent;
+}
+.triangle-white {
+  border-style: solid;
+  border-width: 20px 25px 0;
+  height: 0;
+  left: 20px;
+  position: absolute;
+  top: -5px;
+  width: 0;
+  border-color: #fff transparent transparent transparent;
+}

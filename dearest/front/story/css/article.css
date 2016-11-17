@@ -1,0 +1,95 @@
+
+/*头部*/
+header {
+	width: 100%;
+	height: 70px;
+	border-bottom:1px solid #ccc;
+	line-height: 70px;
+	position: fixed;
+	top: 0px;
+	background-color: #fff;
+}
+.dear {
+	width: 100px;
+	color: #90d966;
+	font-size: 32px;
+	float: left;
+	margin-left: 140px;
+}
+.user {
+	width: 200px;
+	height: 70px;
+	line-height: 70px;
+	float: right;
+	margin-right: 100px;
+}
+.user>img {
+	border-radius: 50%;
+	padding: 10px;
+	float: left;
+}
+.user>span {
+	
+}
+
+/*中间内容*/
+.content-box {
+	width: 960px;
+	height: 800px;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+}
+aside {
+	width: 205px;
+	height: 800px;
+	border-right: 1px solid #ccc;
+	float: left;
+}
+
+.item {
+	width: 205px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+
+.active {
+	background-color: #F17074;
+	color: white;
+}
+.right1 {
+	width: 754px;
+	height: 800px;
+	float: left;
+	display: block;
+}
+.addArticle {
+	width: 195px;
+	height: 50px;
+	border: 1px solid #F17074;
+	border-radius: 25px;
+	text-align: center;
+	line-height: 50px;
+	margin: 0 auto;
+	margin-top: 250px;
+}
+.right2 {
+	width: 754px;
+	height: 800px;
+	float: left;
+	display: none;
+}
+.banner {
+	width: 754px;
+	height: 70px;
+	border-bottom: 1px solid #ccc;
+	line-height: 70px;
+	text-indent: 20px;
+}
+p {
+	text-align: center;
+	margin-top: 200px;
+}
+p>a {
+	color: #F17074;
+}

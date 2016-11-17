@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>后台-新闻详情</title>
+    <meta name="author" content="zyc"  />
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/loader-style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+    
+
+    <link rel="shortcut icon" href="assets/ico/minus.png">
+</head>
+
+<body> 
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!--头部 navbar开始 -->
+    <nav role="navigation" class="navbar navbar-static-top">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="entypo-menu"></span>
+                </button>
+                <button class="navbar-toggle toggle-menu-mobile toggle-left" type="button">
+                    <span class="entypo-list-add"></span>
+                </button>
+
+                <div id="logo-mobile" class="visible-xs">
+                   <h1>后台管理<span></span></h1>
+                </div>
+
+            </div>
+
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+            	
+            	<ul class="nav navbar-nav">
+
+                    <li class="dropdown">
+
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i style="font-size:20px;" class="icon-conversation"></i><div class="noft-red">23</div></a>
+
+
+                      <ul id="dropContent" style="margin: 11px 0 0 9px;" role="menu" class="dropdown-menu dropdown-wrap" >
+                            <li>
+                                <div>查看全部信息</div>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                    <li><a href="#"><i data-toggle="tooltip" data-placement="bottom" title="Help" style="font-size:20px;" class="icon-help tooltitle"></i></a>
+                    </li>
+
+                </ul>
+          
+                <div id="nt-title-container" class="navbar-left running-text visible-lg">
+                    <ul class="date-top">
+                        <li class="entypo-calendar"></li>
+                        <li id="Date"></li>
+
+
+                    </ul>
+
+                    <ul id="digital-clock" class="digital">
+                        <li class="entypo-clock"></li>
+                        <li class="hour"></li>
+                        <li>:</li>
+                        <li class="min"></li>
+                        <li>:</li>
+                        <li class="sec"></li>
+                        <li class="meridiem"></li>
+                    </ul>
+                    <ul id="nt-title">
+                   <!--天气预告-->
+                    </ul>
+                </div>
+
+                <ul  class="nav navbar-nav navbar-right">
+                	 <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" class="admin-pic img-circle" src="assets/img/story.jpg">Hi, 小小 <b class="caret"></b>
+                        </a>
+                        <ul style="margin-top:14px;" role="menu" class="dropdown-setting dropdown-menu">
+                            <li>
+                                <a href="profile.html">
+                                    <span class="entypo-user"></span>&#160;&#160;我的信息</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-vcard"></span>&#160;&#160;账户设置</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-lifebuoy"></span>&#160;&#160;帮助</a>
+                            </li>
+                            <li class="divider"></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="icon-gear"></span>&#160;&#160;更改背景</a>
+                            <!--设置背景颜色-->
+                        <ul role="menu" class="dropdown-setting dropdown-menu">
+
+                            <li class="theme-bg">
+                                <div id="button-bg5"></div>
+                                <div id="button-bg6"></div>
+                                <div id="button-bg7"></div>
+                                <div id="button-bg13"></div>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!--头部 navbar结束 -->
+
+    <!-- 左边菜单栏开始 -->
+    <div id="skin-select">
+        <div id="logo">
+        	<img src="../../../commom/img/logo.png" style="float: left;width: 3vw;"/>
+         <h1>亲爱的</h1>
+        </div>
+
+        <a id="toggle">
+            <span class="entypo-menu"></span>
+        </a>
+        <div class="dark">
+            <form action="#">
+                <span>
+                    <input  type="text" name="search" value="查询 菜单..." class="search rounded id_search" autofocus="">
+                </span>
+            </form>
+        </div>
+
+        <div class="search-hover">
+            <form id="demo-2">
+                <input type="search" placeholder="查询 菜单..." class="id_search">
+            </form>
+        </div>
+
+
+
+
+        <div class="skin-part">
+            <div id="tree-wrap">
+                <div class="side-bar">
+                    <ul class="topnav menu-left-nest">
+
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="#" title="用户管理">
+                                <i class="icon-document-edit"></i>
+                                <span>用户管理</span>
+
+                            </a>
+                            <ul>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="userList.html" title="用户列表"><i class="entypo-doc-text"></i><span>用户列表</span></a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="404.html" title=""><i class="entypo-newspaper"></i><span>用户详情</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="404.html" title="志愿者管理">
+                                <i class="icon-feed"></i>
+                                <span>志愿者管理</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="index.html" title="失踪人员管理">
+                                <i class="icon-camera"></i>
+                                <span>失踪人员管理</span>
+
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="topnav menu-left-nest">
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="404.html" title="活动">
+                                <i class="icon-window"></i>
+                                <span>活动</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="404.html" title="故事">
+                                <i class="icon-mail"></i>
+                                <span>故事</span>
+                                <div class="noft-blue">New</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a class="tooltip-tip ajax-load" href="table-static.html" title="爱心人士">
+                                <i class="icon-user"></i>
+                                <span>爱心人士</span>
+                                <div class="noft-blue">New</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a class="tooltip-tip ajax-load" href="company.html" title="爱心企业">
+                                <i class="icon-user"></i>
+                                <span>爱心企业</span>
+                                <div class="noft-blue">New</div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="news.html" title="新闻">
+                                <i class="icon-preview"></i>
+                                <span>新闻</span>
+                                <div class="noft-blue New" >New</div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip" href="#" title="其他">
+                                <i class="icon-document-new"></i>
+                                <span>其他</span>
+                            </a>
+                            <ul>
+                                 <li>
+                                    <a class="tooltip-tip2 ajax-load" href="profile.html" title="Profile Page"><i class="icon-user"></i><span>个人主页</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip" href="login.html" title="登陆">
+                                <i class="icon-download"></i>
+                                <span>登陆</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <ul id="menu-showhide" class="topnav menu-left-nest">
+             
+                        <li>
+                            <a class="tooltip-tip" href="#" title="关于我们">
+                                <i class="icon-document"></i>
+                                <span>关于我们</span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="side-dash">
+                        <h3>
+                            <span>访问量</span>
+                        </h3>
+                        <div id="g1" style="height:180px" class="gauge"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 左边菜单栏结束 -->
+
+
+
+    
+    <div class="wrap-fluid">
+        <div class="container-fluid paper-wrap bevel tlbr">
+
+		<!--开始-->
+
+          <!--中间顶部开始-->
+            <div class="row">
+                <div id="paper-top">
+                    <div class="col-lg-3">
+                        <h2 class="tittle-content-header">
+                            <i class="icon-window"></i> 
+                            <span>新闻</span>
+                        </h2>
+
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="devider-vertical visible-lg"></div>
+                        <div class="tittle-middle-header">
+
+                            <div class="alert">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <span class="tittle-alert entypo-info-circled"></span>
+                                	欢迎回来,&nbsp;
+                                <strong>小小!</strong>&nbsp;&nbsp;你的上次登陆是在 昨天, 16:54 PM
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+            <ul id="breadcrumb">
+                <li>
+                    <span class="entypo-home"></span>
+                </li>
+                <li><i class="fa fa-lg fa-angle-right"></i>
+                </li>
+                <li><a href="news.html" title="">新闻</a>
+                </li>
+                <li><i class="fa fa-lg fa-angle-right"></i>
+                </li>
+                <li><a href="news_detail.html" title="">新闻详情</a>
+            </ul>
+		  <!--中间顶部结束-->
+
+
+
+			<!--右边内容-->
+            <div class="content-wrap">
+                
+          	
+               <!--编辑列表开始-->
+             <div class="row">
+              	 <div class="col-sm-12">
+                        <div class="well profile">
+                            <div class="col-sm-12">
+                                <div class="col-xs-12 col-sm-4 text-center">
+                                	
+                                	
+									<!--个人信息左边开始-->
+                                    <ul class="list-group">
+                                        <li class="list-group-item text-left">
+                                            <span class="entypo-user"></span>&nbsp;&nbsp;新闻详情</li>
+                                        <li class="list-group-item text-center">
+                                            <img src="assets/img/wangbin.jpg" alt="" class="img-circle img-responsive img-profile">
+
+                                        </li>
+                                    </ul>
+                                    <!--个人信息左边结束-->
+
+                                </div>
+                                <div class="col-xs-12 col-sm-8 profile-name">
+                                    <h3>默默，生日蜡烛为你点燃，家中妈妈盼你归来 </h3>
+                                    <div class="row" style="float: right;margin-top: -4vh;">
+                                    <button class="btn btn-danger ">编辑</button>
+                                    <button class="btn btn-info ">增加</button>
+                                    <button class="btn btn-default ">删除</button>
+                                    </div>
+                                    <hr>
+
+                                    <dl class="dl-horizontal-profile">
+                                        <dt>发布时间</dt>
+                                        <dd>2000/12/7 11:03:01</dd>
+
+                                        <dt>出处</dt>
+                                        <dd>《家报》第159期</dd>
+                                        
+                                        <dt>作者</dt>
+                                        <dd></dd>
+
+                                        <dd>
+                                        	"儿子啊，你在哪里？你可知道妈妈想你都快疯了……"这是母亲李燕在儿子生日晚餐上的凄哀呼唤。
+　　这是个普通却让人心酸的生日晚餐，小寿星的妈妈、爸爸、姥姥、老爷围坐在桌旁， 生日蛋糕上的蜡烛在静静地燃烧着，所有人都默默地注视着蜡烛，然而，生日的主角--12岁的小默默，却不知在天涯何方！
+　　"儿子呀，你到底在哪儿？你知道妈妈的心在流血呀！"母亲声嘶力竭的叫喊撕碎了在场的每一个人的心，泪水伴着燃烧的蜡烛，一滴滴地流淌着……
+　　"儿子，今天是你的生日，爸、妈给你过生日，你听到了吗……该吹蜡烛了，现在你都12岁了，这12颗蜡烛，你一口气就能吹灭，真的，妈相信你，你能做到，要不，你给大家表演一下……可是，儿子呀，你到底在哪儿？"
+　　这是12月5日发生在哈尔滨市香坊区普通人家的一幕……
+<strong>儿子上学路上失踪</strong>
+　　已经12岁的陈默是太平区公署小学四年级的学生，母亲李燕原是哈尔滨轴承厂职工，父亲陈晶岩在哈尔滨松江电机厂医院工作。陈默的父母没能给他一个完整的家，在他7岁那年，因感情不和，他们分道扬镳。从此陈默便和妈妈一起生活在姥姥家。家庭的缺憾并未给小陈默带来多大的影响，他仍在幸福、快乐地生活着。然而，不幸发生在今年1月4日：从这一天开始，陈默就没再回来……
+　　1月3日晚上8时许，因为过几天就要期末考试了，上完辅导班的陈默回到了离学校较近的爸爸家，4日7时，吃完早饭的小默默蹦蹦跳跳地上学地去了。
+　　8时许，陈晶岩突然接到前妻李燕打来的电话："刚才老师说，默默没有上学，到底怎么回事？""不可能，早晨上学时我看着他下楼的！"此刻，陈晶岩脑子嗡的一下，放下电话，两人都慌慌张张地跑到学校。
+　　一到学校，陈默的班主任刘春燕便告诉他们，陈默今天没来上学。陈默的同学张世铭还说，今天早上在上学的路上，他还看到了陈默。就这样，亲友们四处寻找了3天，到了1月7日早，太平公安分局刑警四中队正式立案：陈默失踪了。
+　　据刘春燕介绍，陈默是好学生，学习成绩好，与同学关系好，课余时间，也从来不去类似游戏厅那样的场所。失踪前一天，在学校也没有任何不正常的举止，因此离家出走是不可能的。
+<strong>母亲：找过的地方数不清</strong>
+　　母亲李燕的心碎了！她哭着告诉记者：
+　　"默默生活在单亲家庭里，7年了，我们娘俩相依为命，他是我惟一的精神支柱。默默是懂事的孩子，家庭的变故使他缺少了同龄孩子的天真，却过早地明白了许多事理，他经常在我和他爸之间来往，却从来没有传过坏话，这几年，我和他爸各自的生活都很平稳，默默在中间起了不少作用。
+　　7年来，我没有房子，和儿子一直生活在娘家，老人很宠爱小默默，可是默默仍把自己看成是家中的小男子汉。我记得，儿子上二年级的时候，冬天，默默放学时天已经黑了，我一个人去学校接儿子时，他看到同学们大多是父母一起来或是父亲来，默默竟对我说：'妈，我和爸爸说，以后让我爸爸接我，你就别来了，你我个人不安全。'那年他才8岁，这么点儿的孩子，他就知道我的艰辛。唉，像这样的事儿，太多太多了！"
+　　"孩子走失的时候，穿着一件蓝色羽绒服"，这是李燕在这几个月中逢人就讲的一句话。已经下岗的李燕，这几个月来更无心找工作，她说，她从不敢一个人在家，每天要做的事儿，就是到处走。 今年3月份，听人说，有人在长春火车站看见一个孩子，很像默默，李燕知道后，立马赶到长春。在火车站、在小旅馆她疯了一样，拽着一个小盲流就问："看没看见过一个穿蓝色羽绒服的男孩"，甚至她还与这群孩子待了几天打听默默的下落，结果又是一次失望。听说山东农村有的人家买孩子，她又跑以山东和江苏两省交界的、她都叫不出名字的地方，装作是人贩子对当地人讲："你们要不要孩子？我这有一个11岁男孩儿"，不想当地人却说："这么大的孩子，哪能养得住"，这句话对她的打击很大。她乔装改扮，和人贩子接近，一打听到孩子可能去的地方，她就二话不说，立马就去。这几个月，她究竟去了多少个地方，自己也说不清……有几次，她真的有些跑不动了，可是，要找到儿子的信念再次让她打起精神，她说，一到她有些疲倦的时候，就仿佛听见儿子在耳边呼唤着"妈妈，妈妈"。
+<strong>父亲：儿子的东西一样也不能少</strong>
+　　这位刚过不惑之年的父亲，在这几个月中，头发花白了许多。他说，他常常几个晚上都睡不着觉。他怎么也不明白，这么大的儿子，怎么说没就没了呢？
+　　默默仍旧是再婚父亲家里的一员，每到周末默默回到父亲家里，陈晶岩看到儿子快乐地生活，内心少了些自责：缺憾的家庭并没有过多地伤害孩子。也正缘地此，他把父爱更加毫无保留地献给儿子。他常叨念着，儿子啊，虽然爸爸不能给你一个完整的家，可是却能给你一个完整的父爱！
+　　今年7月份放暑假，学校通知他到学校整理儿子的学习用品，那天，他一走进教室里，孩子们叽叽喳喳的嬉戏声立刻停了下来，儿子的小书桌依旧在那，可是位置是空着的。这个位置他太熟悉了，以前一有空闲，他就会偷偷地趴在教室的门边，看看儿子是不是注意听课。他默默地整理着儿子的用品：书、本，就连儿子用的废纸蒌，他都没落下。拿着孩子的东西下楼，当他从三楼走到二楼时，竟虚脱了，坐在台阶上足足半个小时。 在儿子的房间里，摆设如昨，床、拖鞋、衣服甚至孩子扔进纸篓的废纸团儿……
+　　如今，为了找儿子，陈晶岩已经花去了6万多元，家中能卖的东西都卖了，可是这位汉子却字字铿锵地说："再缺钱，我也不卖房子，因为总有一天，儿子会回来，家中的地址、电话、传呼号永远不变，因为儿子一定会给家中来电话！"
+<strong>亲人泣血呼唤：默默，回家吧！</strong>
+　　默默的失踪，让这对离异的夫妻之间的关系平和了许多，几个月来，找到儿子的信念把两人再次联系到一起，以前所有的恩怨，在这几个月中似乎化为乌有。他们相互安慰着、鼓励着。一有消息，他们想告诉的第一人就是对方。默默的失踪彻底击垮了李燕，此刻，陈晶岩似乎感到自己的责任，他一边不断的寻找儿子，一边安慰李燕："你放心，我一定把儿子找回来！"
+　　默默失踪了，也几乎击垮了默默的所有亲人。从小带大的默默的姥姥，一听到记者要来采访的电话，竟在电话中哭得说不出话来，而老爷甚至不敢接受采访。默默年迈的爷爷、奶奶原本重病在身，一听说孙子丢了，老两口竟一病不起。几天前，重病的爷爷似乎再熬不过去了，弥留之际，老人最后的一句话是告诉床前的儿子："等默默回来，千万别忘了告诉我一声……"
+　　采访中，记者心情异常沉重，照片上这个漂亮、可爱的男孩儿究竟在哪里？小默默你可知道，你妈妈需要你，你的爸爸在等着你，所有关心你的人都在等待你与亲人团聚的那一刻。
+　　记者真诚地希望所有看到本报这篇报道的读者，请你把你所了解的一丝线索告知我们，告知默默的亲人，我们都在等着你……
+<strong>陈默家人的联系方式：5656667 128-8020980</strong>
+                                        </dd>
+
+                                    </dl>
+
+
+                                    <hr>
+
+                                  
+                               
+
+                                </div>
+
+                            </div>
+                          
+                        </div>
+                    </div>
+
+
+               <!--编辑列表结束-->
+               
+               
+                </div>
+                <!--右边内容结束-->
+
+
+				<!--底部开始-->
+                <div class="footer-space"></div>
+                <div id="footer">
+                    <div class="devider-footer-left"></div>
+                    <div class="time">
+                        <p id="spanDate">
+                        <p id="clock">
+                    </div>
+                    <div class="copyright">
+                        <span class="entypo-heart"></span><a href="" title="" >亲爱的</a></div>
+                    <div class="devider-footer"></div>
+
+
+                </div>
+                <!--底部结束-->
+
+
+            </div>
+        </div>
+    </div>
+
+
+	
+    
+	<!--导航栏+菜单栏-->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script src="assets/js/progress-bar/number-pb.js"></script><!--换背景颜色-->
+    <script type="text/javascript" src="assets/js/preloader.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/load.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+	
+	<script src="assets/javascript/index.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+	
+	
+	
+
+<div style="text-align:center;">
+<p>Dearest <a href="" target="_blank" title="亲爱的">亲爱的</a><a href="" title="" target="_blank"></a></p>
+</div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,97 @@
+.welcome,.team,.services,.contact,.about,.about1{
+	padding:5em 0;
+}
+.welcome h3,.team h3,.services h3{
+	
+	font-size: 3em;
+    color:#f17074;
+	text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+}
+p.et{
+	font-size: 14px;
+    color: #999;
+    margin:0 auto 0;
+    line-height: 1.8em;
+    width: 70%;
+    text-align: center;
+}
+.line{
+	width: 11%;
+    margin: 0.5em auto;
+    border: 1px dashed #E1A20C;
+}
+
+.welcome-grids,.team-grids{
+	margin:2em 0 0;
+}
+.services-grids{
+	margin:2em 0 0;
+}
+.welcome-grid-left{
+	float:left;
+	width:65%;
+	text-align:right;
+	margin: 2em 0 0;
+}
+.welcome-grid-left h4 {
+	color:#6DBEE8;
+	font-family: 'Oswald', sans-serif;
+    margin: 0;
+	font-size:1.3em;
+	text-transform:capitalize;
+}
+.welcome-grid-left h4 a{
+	color:#6DBEE8;
+	font-family: 'Oswald', sans-serif;
+    margin: 0;
+	font-size:1.05em;
+	text-transform:capitalize;
+}
+.welcome-grid-left p{
+	color:#999;
+	font-size:14px;
+	margin:.5em 0 0;
+	line-height:1.8em;
+}
+.welcome-grid-right{
+	float:right;
+	width:30%;
+}
+.aliquam{
+	float:left !important;
+	width:30% !important;
+}
+.non{
+	float:right !important;
+	width:65% !important;
+	text-align:left !important;
+}
+.welcome-grids:nth-child(2){
+	margin:2em 0 0;
+}
+.welcome-grid:hover .welcome-grid-right {
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+}
+.welcome-grid:hover .aliquam {
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+}

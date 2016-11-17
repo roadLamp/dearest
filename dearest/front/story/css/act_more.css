@@ -1,0 +1,18 @@
+.wrapper_single a {
+	color: #000000;
+}
+.wrapper_single a:hover{
+	color: red;
+}
+.wrapper_single .time{
+	float: right;
+}
+.content p {
+	text-indent:2em; line-height: 30px;
+}
+.text_strong {
+	font-weight: 700;
+}
+.text_color {
+	color: red;
+}

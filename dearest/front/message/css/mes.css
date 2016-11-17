@@ -1,0 +1,101 @@
+.welcome-grids,.team-grids{
+	margin:2em 0 0;
+}
+.services-grids{
+	margin:2em 0 0;
+}
+.welcome-grid-left{
+	float:left;
+	width:65%;
+	text-align:right;
+	margin: 2em 0 0;
+}
+.welcome-grid-left h4 {
+	color:#6DBEE8;
+	font-family: 'Oswald', sans-serif;
+    margin: 0;
+	font-size:1.3em;
+	text-transform:capitalize;
+}
+.welcome-grid-left h4 a{
+	color:#6DBEE8;
+	font-family: 'Oswald', sans-serif;
+    margin: 0;
+	font-size:1.05em;
+	text-transform:capitalize;
+}
+.welcome-grid-left p{
+	color:#999;
+	font-size:14px;
+	margin:.5em 0 0;
+	line-height:1.8em;
+}
+.welcome-grid-right{
+	float:right;
+	width:30%;
+}
+.aliquam{
+	float:left !important;
+	width:30% !important;
+}
+.non{
+	float:right !important;
+	width:65% !important;
+	text-align:left !important;
+}
+.welcome-grids:nth-child(2){
+	margin:2em 0 0;
+}
+.welcome-grid:hover .welcome-grid-right {
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+}
+.welcome-grid:hover .aliquam {
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+}
+/*---------*/
+/*-- services --*/
+.para span{
+	font-size: 2em;
+    color: #fff;
+    background:#90D966;
+    padding: .8em 0 0;
+    width: 90px;
+    height: 90px;
+    border-radius: 60px;
+    top: 38px;
+    left: 128px;
+    text-align: center;
+}
+.para p{
+	color: #999;
+    font-size: 14px;
+    line-height: 1.8em;
+    margin: 0;
+    border: 1px dashed #E1A20C;
+    padding: 4em 2em 2em;
+    text-align: center;
+}
+.services-grid:hover div.para span{
+	background:#f17074;
+}
+.services-grid:hover div.para p{
+	border: 1px dashed #000;
+}

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>后台-爱心人士</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/loader-style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link href="assets/js/stackable/stacktable.css" rel="stylesheet">
+    <link href="assets/js/stackable/responsive-table.css" rel="stylesheet">
+
+
+
+
+
+
+
+   
+    <link rel="shortcut icon" href="assets/ico/minus.png">
+</head>
+
+<body>
+   <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!--头部 navbar开始 -->
+    <nav role="navigation" class="navbar navbar-static-top">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="entypo-menu"></span>
+                </button>
+                <button class="navbar-toggle toggle-menu-mobile toggle-left" type="button">
+                    <span class="entypo-list-add"></span>
+                </button>
+
+
+
+
+                <div id="logo-mobile" class="visible-xs">
+                   <h1>后台管理<span></span></h1>
+                </div>
+
+
+            </div>
+
+
+           
+             <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+            	
+            	<ul class="nav navbar-nav">
+
+                    <li class="dropdown">
+
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i style="font-size:20px;" class="icon-conversation"></i><div class="noft-red">23</div></a>
+
+
+                      <ul id="dropContent" style="margin: 11px 0 0 9px;" role="menu" class="dropdown-menu dropdown-wrap" >
+                            <li>
+                                <div>查看全部信息</div>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                    <li><a href="#"><i data-toggle="tooltip" data-placement="bottom" title="Help" style="font-size:20px;" class="icon-help tooltitle"></i></a>
+                    </li>
+
+                </ul>
+          
+                <div id="nt-title-container" class="navbar-left running-text visible-lg">
+                    <ul class="date-top">
+                        <li class="entypo-calendar"></li>
+                        <li id="Date"></li>
+
+
+                    </ul>
+
+                    <ul id="digital-clock" class="digital">
+                        <li class="entypo-clock"></li>
+                        <li class="hour"></li>
+                        <li>:</li>
+                        <li class="min"></li>
+                        <li>:</li>
+                        <li class="sec"></li>
+                        <li class="meridiem"></li>
+                    </ul>
+                    <ul id="nt-title">
+                     
+                    </ul>
+                </div>
+
+                <ul  class="nav navbar-nav navbar-right">
+                	 <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" class="admin-pic img-circle" src="assets/img/story.jpg">Hi, 小小 <b class="caret"></b>
+                        </a>
+                        <ul style="margin-top:14px;" role="menu" class="dropdown-setting dropdown-menu">
+                            <li>
+                                <a href="profile.html">
+                                    <span class="entypo-user"></span>&#160;&#160;我的信息</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-vcard"></span>&#160;&#160;账户设置</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-lifebuoy"></span>&#160;&#160;帮助</a>
+                            </li>
+                            <li class="divider"></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="icon-gear"></span>&#160;&#160;更改背景</a>
+                            <!--设置背景颜色-->
+                        <ul role="menu" class="dropdown-setting dropdown-menu">
+
+                            <li class="theme-bg">
+                                <div id="button-bg5"></div>
+                                <div id="button-bg6"></div>
+                                <div id="button-bg7"></div>
+                                <div id="button-bg13"></div>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- /头navbar结束 -->
+
+    <!-- 左菜单开始 -->
+    <div id="skin-select">
+        <div id="logo"  >
+        	<img src="../../../commom/img/logo.png" style="float: left;width: 3vw; "/>
+         <h1>亲爱的</h1>
+        </div>
+
+        <a id="toggle">
+            <span class="entypo-menu"></span>
+        </a>
+         
+        <div class="dark">
+            <form action="#">
+                <span>
+                    <input  type="text" name="search" value="" class="search rounded id_search" placeholder="查询 菜单..." autofocus="">
+                </span>
+            </form>
+        </div>
+        
+
+        <div class="search-hover">
+            <form id="demo-2">
+                <input type="search" placeholder="Search Menu..." class="id_search">
+            </form>
+        </div>
+
+
+         <div class="skin-part">
+            <div id="tree-wrap">
+                <div class="side-bar">
+                    <ul class="topnav menu-left-nest">
+
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="#" title="用户管理">
+                                <i class="icon-document-edit"></i>
+                                <span>用户管理</span>
+
+                            </a>
+                            <ul>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="userList.html" title="用户列表"><i class="entypo-doc-text"></i><span>用户列表</span></a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="404.html" title=""><i class="entypo-newspaper"></i><span>用户详情</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="404.html" title="志愿者管理">
+                                <i class="icon-feed"></i>
+                                <span>志愿者管理</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="index.html" title="失踪人员管理">
+                                <i class="icon-camera"></i>
+                                <span>失踪人员管理</span>
+
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="topnav menu-left-nest">
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="404.html" title="活动">
+                                <i class="icon-window"></i>
+                                <span>活动</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="404.html" title="故事">
+                                <i class="icon-mail"></i>
+                                <span>故事</span>
+                                <div class="noft-blue">New</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a class="tooltip-tip ajax-load" href="table-static.html" title="爱心人士">
+                                <i class="icon-user"></i>
+                                <span>爱心人士</span>
+                                <div class="noft-blue">New</div>
+                            </a>
+                        </li>
+                         <li>
+                            <a class="tooltip-tip ajax-load" href="company.html" title="爱心企业">
+                                <i class="icon-user"></i>
+                                <span>爱心企业</span>
+                                <div class="noft-blue">New</div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="news.html" title="新闻">
+                                <i class="icon-preview"></i>
+                                <span>新闻</span>
+                                <div class="noft-blue New" >New</div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip" href="#" title="其他">
+                                <i class="icon-document-new"></i>
+                                <span>其他</span>
+                            </a>
+                            <ul>
+                                 <li>
+                                    <a class="tooltip-tip2 ajax-load" href="profile.html" title="Profile Page"><i class="icon-user"></i><span>个人主页</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip" href="login.html" title="登陆">
+                                <i class="icon-download"></i>
+                                <span>登陆</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <ul id="menu-showhide" class="topnav menu-left-nest">
+             
+                        <li>
+                            <a class="tooltip-tip" href="#" title="关于我们">
+                                <i class="icon-document"></i>
+                                <span>关于我们</span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="side-dash">
+                        <h3>
+                            <span>访问量</span>
+                        </h3>
+                        <div id="g1" style="height:180px" class="gauge">46578</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 左边菜单栏结束 -->
+
+
+
+    <!--  PAPER WRAP -->
+    <div class="wrap-fluid">
+        <div class="container-fluid paper-wrap bevel tlbr">
+
+
+
+
+
+            <!-- 内容 -->
+            <!--标题 -->
+            <div class="row">
+                <div id="paper-top">
+                    <div class="col-sm-3">
+                        <h2 class="tittle-content-header">
+                            <span class="entypo-layout"></span>
+                            <span>爱心人士详情
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <div class="col-sm-7">
+                        <div class="devider-vertical visible-lg"></div>
+                        <div class="tittle-middle-header">
+
+                            <div class="alert">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <span class="tittle-alert entypo-info-circled"></span>
+                                		欢迎回来,&nbsp;
+                                <strong>小小!</strong>&nbsp;&nbsp;你的上次登陆是在 昨天, 16:54 PM
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <!--/ 标题结束 -->
+
+            <!-- 表格头 -->
+            <ul id="breadcrumb">
+                <li>
+                    <span class="entypo-home"></span>
+                </li>
+                <li><i class="fa fa-lg fa-angle-right"></i>
+                </li>
+                <li><a href="#" title="Sample page 1">主页</a>
+                </li>
+                <li><i class="fa fa-lg fa-angle-right"></i>
+                </li>
+                <li><a href="#" title="Sample page 1">爱心人士</a>
+                </li>
+                <li class="pull-right">
+                    <div class="input-group input-widget">
+
+                        <input style="border-radius:15px" type="text" placeholder="查询..." class="form-control">
+                    </div>
+                </li>
+            </ul>
+
+            <!-- 结束 -->
+
+				<!--表内容开始-->
+            <div class="content-wrap">
+                <div class="row">
+
+
+                    <div class="col-sm-12">
+
+                        <div class="nest" id="tableStaticClose">
+                            <div class="title-alt">
+                                <h6>志愿者协会</h6>
+                                <div class="titleClose">
+                                    <a class="gone" href="#tableStaticClose">
+                                        <span class="entypo-cancel"></span>
+                                    </a>
+                                </div>
+                                <div class="titleToggle">
+                                    <a class="nav-toggle-alt" href="#tableStatic">
+                                        <span class="entypo-up-open"></span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="body-nest" id="tableStatic">
+
+                                <section id="flip-scroll">
+
+                                    <table class="table table-bordered table-striped cf">
+                                        <thead class="cf">
+                                            <tr>
+                                                <th class="numeric">省份、城市</th>
+                                                <th>协会基地</th>
+                                                <th class="numeric">创建时间</th>
+                                                <th class="numeric">第一年人数</th>
+                                                <th class="numeric">离开人数</th>
+                                                <th class="numeric">近三年增长人数</th>
+                                                <th class="numeric">近三年离开人数</th>
+                                                <th class="numeric">迄今总人数</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody id="number">
+                                            
+                                            
+                                            
+                                        </tbody>
+                                    </table>
+                                </section>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="content-wrap">
+                <div class="row">
+
+
+                    <div class="col-sm-12">
+
+                        <div class="nest" id="StackableClose">
+                            <div class="title-alt">
+                                <h6> 志愿者比例分布</h6>
+                                <div class="titleClose">
+                                    <a class="gone" href="#tStackableClose">
+                                        <span class="entypo-cancel"></span>
+                                    </a>
+                                </div>
+                                <div class="titleToggle">
+                                    <a class="nav-toggle-alt" href="#StackableStatic">
+                                        <span class="entypo-up-open"></span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="body-nest" id="StackableStatic">
+
+                                <table id="responsive-example-table" class="table large-only">
+                                    <tbody id="scale">
+                                        <tr class="text-right">
+                                            <th style="width=30%;">省份</th>
+                                            <th style="width=12%;">主要分布地区</th>
+                                            <th style="width=12%;">总人数</th>
+                                            <th style="width=12%;">所占总比例</th>
+                                            <th style="width=12%;">资金资助</th>
+                                            <th style="width=18%;">主要负责人</th>
+                                            
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                            <nav class="nav">
+							  <ul class="pagination">
+							    <li class="disabled"><a href="#">&laquo;</a></li>
+							    <li class="active"><a href="#">1 </a></li>
+							    <li class="disabled"><a href="#">2 </a></li>
+							    <li class="disabled"><a href="#">3 </a></li>
+							    <li class="disabled"><a href="#">4 </a></li>
+							    <li class="disabled"><a href="#">&laquo;</a></li>
+							  </ul>
+							</nav>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- /END OF CONTENT 
+
+
+
+            <!-- FOOTER -->
+            <div class="footer-space"></div>
+            <div id="footer">
+                <div class="devider-footer-left"></div>
+                <div class="time">
+                    <p id="spanDate">
+                    <p id="clock">
+                </div>
+                <div class="copyright">
+                        <span class="entypo-heart"></span><a href="" title="" >亲爱的</a></div>
+                    <div class="devider-footer"></div>
+
+            </div>
+            <!-- / END OF FOOTER -->
+
+        </div>
+    </div>
+    <!--  END OF PAPER WRAP -->
+
+   
+
+
+    <!-- MAIN EFFECT -->
+    <script type="text/javascript" src="assets/js/preloader.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/load.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+
+
+
+
+
+
+
+
+    <!-- /MAIN EFFECT -->
+    <script type="text/javascript" src="assets/js/stackable/stacktable.js"></script>
+
+
+    <script>
+    $(document).on('click', '#run', function(e) {
+        e.preventDefault();
+        $('#simple-example-table').stacktable({
+            hideOriginal: true
+        });
+        $(this).replaceWith('<span>ran</span>');
+    });
+    $('#responsive-example-table').stacktable({
+        myClass: 'stacktable small-only'
+    });
+    </script>
+
+
+
+
+</body>
+
+</html>
